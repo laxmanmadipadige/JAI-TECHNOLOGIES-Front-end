@@ -1,0 +1,115 @@
+/* ==========================
+   FEATURES SECTION STYLING
+   ========================== */
+   .features-section {
+    background-color: white;
+    color: #000; /* Use dark color for readability */
+    padding: 50px 20px; /* Add padding for space */
+    text-align: center;
+  }
+  
+  /* ==========================
+     FIXED HEADER STYLING
+     ========================== */
+  .header {
+    background-color: black; /* Black background */
+    height: 400px; /* Fixed height */
+    color: white; /* Ensure text is visible */
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  /* Ensure h1 inside header is white and readable */
+  .header h1 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+  
+  /* Ensure button inside header is visible */
+  .header-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .header-button:hover {
+    background-color: #ddd;
+  }
+  
+  /* ==========================
+     FEATURES GRID STYLING
+     ========================== */
+  .features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px; /* Space between features */
+  }
+  
+  .feature {
+    flex: 1 1 22%; /* Responsive: four items per row on large screens */
+    max-width: 300px;
+    text-align: center;
+    margin: 20px auto; /* Center the feature on smaller screens */
+  }
+  
+  /* Feature Icons */
+  .feature img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Feature Titles */
+  .feature h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  /* Feature Descriptions */
+  .feature p {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter color for text */
+  }
+  
+  /* ==========================
+     RESPONSIVE STYLES
+     ========================== */
+  @media (max-width: 1024px) {
+    .feature {
+      flex: 1 1 45%; /* Two items per row on tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feature {
+      flex: 1 1 100%; /* One item per row on smaller screens */
+    }
+  
+    .feature img {
+      width: 50px; /* Smaller icons for smaller devices */
+    }
+  
+    .feature h3 {
+      font-size: 1.2rem; /* Adjust font size */
+    }
+  
+    .feature p {
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  }
+  

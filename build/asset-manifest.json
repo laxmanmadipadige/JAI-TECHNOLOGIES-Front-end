@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9d4752b4.css",
+    "main.js": "/static/js/main.9f17d7c0.js",
+    "static/js/453.1e8a3531.chunk.js": "/static/js/453.1e8a3531.chunk.js",
+    "static/media/photography-group-marketing-experts-background.jpg": "/static/media/photography-group-marketing-experts-background.4228d600003203589efa.jpg",
+    "static/media/CogniTips.webp": "/static/media/CogniTips.d42ab777224775aba435.webp",
+    "static/media/CogniQuotes.webp": "/static/media/CogniQuotes.f9ec79c7df64e7dfec7f.webp",
+    "static/media/bluebackground.png": "/static/media/bluebackground.d240ce744128c8308a28.png",
+    "static/media/Arrow.jpeg": "/static/media/Arrow.2e9b0315718ac4ded65a.jpeg",
+    "static/media/coding.avif": "/static/media/coding.0bfd32519cdfed725c45.avif",
+    "static/media/A1.jpg": "/static/media/A1.ab4f780277859f8c38bf.jpg",
+    "static/media/coding2.avif": "/static/media/coding2.d41eb7a4dec251624e8d.avif",
+    "static/media/A2.jpg": "/static/media/A2.ce6c2449e5888d106d87.jpg",
+    "static/media/HomePage.avif": "/static/media/HomePage.566fe9b71fc9f48a21e2.avif",
+    "static/media/Scalability.svg": "/static/media/Scalability.7acac01042d9cc464981f67f304b6d2c.svg",
+    "static/media/Cost-effectiveness.svg": "/static/media/Cost-effectiveness.6b6421e8f6cd4f1867ed60754a3db9ca.svg",
+    "static/media/Industry.svg": "/static/media/Industry.da135e46ebcd86186b8d57b4dd7ac162.svg",
+    "static/media/Innovative.svg": "/static/media/Innovative.f0ac0df241911d7f6cc51d2063c3e738.svg",
+    "index.html": "/index.html",
+    "main.9d4752b4.css.map": "/static/css/main.9d4752b4.css.map",
+    "main.9f17d7c0.js.map": "/static/js/main.9f17d7c0.js.map",
+    "453.1e8a3531.chunk.js.map": "/static/js/453.1e8a3531.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d4752b4.css",
+    "static/js/main.9f17d7c0.js"
+  ]
+}

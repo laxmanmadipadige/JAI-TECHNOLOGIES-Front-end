@@ -1,0 +1,387 @@
+/* =======================
+   ServiceList Component Styles
+=========================== */
+
+
+
+/* Container styling */
+.ai-banner-container {
+  
+    background-color: #1e3a8a; /* Deep blue fallback color */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* For absolute positioning of the background image */
+    overflow: hidden; /* Prevent image overflow */
+  }
+  
+  /* Content styling */
+  .ai-banner-content {
+    color: white !important;
+    max-width: 600px;
+    position: relative;
+    z-index: 1; /* Ensure content appears above the background image */
+  }
+  
+  
+  
+  
+  .ai-banner-tag {
+    color: white !important;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  
+  .ai-banner-title {
+    color: white !important; 
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .ai-banner-description {
+    color: white !important;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  /* Button styling */
+  .ai-banner-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #1e3a8a;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Background image styling */
+  .ai-banner-background {
+    position: absolute; /* Position the image inside the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Span the full width of the container */
+    height: 100%; /* Span the full height of the container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+  }
+  
+  /* Container for the ServiceList component */
+  .service-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  /* Wrapper for the content inside the ServiceList, with flex layout */
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+  }
+  
+  /* Left side of the content - holds the title, description, and arrow image */
+  .text-section {
+    flex: 1;
+    max-width: 40%;
+    position: relative;
+  }
+  
+  /* Header text styling */
+  .header-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #091133;
+  }
+  
+  /* Description text styling */
+  .description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Arrow pattern container */
+  .arrow-pattern {
+    margin-top: 20px; /* Adds spacing between text and arrow */
+    width: 250px;
+  }
+  
+  /* Arrow pattern image styling */
+  .arrow-pattern img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Right side of the content - holds the list of services */
+  .services-list {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual service item styling - animation applied on scroll */
+  .service-item {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  /* When the service item becomes visible, apply animation */
+  .service-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Icon next to the service title */
+  .service-icon {
+    font-size: 1.5rem;
+    color: #091133;
+    margin-right: 15px;
+  }
+  
+  /* Content inside each service item (title and description) */
+  .service-content {
+    max-width: 600px;
+  }
+  
+  /* Service title styling */
+  .service-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #091133;
+  }
+  
+  /* Service description styling */
+  .service-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    /* Stack the content vertically and center it */
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+  
+    /* Make the sections take full width */
+    .text-section, .services-list {
+        max-width: 100%;
+    }
+  
+    /* Resize the arrow pattern for smaller screens */
+    .arrow-pattern {
+        width: 180px;
+    }
+  }
+  
+  
+  /* =======================
+   ITServices Component Styles
+  =========================== */
+  
+  /* Body styling */
+  
+  
+  /* Main container for the ITServices component */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  /* Content section of the ITServices, with flex layout */
+  .content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Header (main title) styling */
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph styling */
+  p {
+    color: #4a4a4a;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Styling for the unordered list */
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for individual list items */
+  ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* Grid container for service cards */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Responsive design for medium screens and above */
+  @media (min-width: 768px) {
+    /* Arrange the container in a row with space between items */
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+    /* Adjust content section width */
+    .content {
+        width: 50%;
+    }
+  
+    /* Two-column grid for the service cards */
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Styling for individual service cards */
+  .service-card {
+    display: flex;
+    align-items: flex-start;
+    background: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Icon inside the service card */
+  .service-card .icon {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Title inside the service card */
+  .service-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+  }
+  
+  /* Description inside the service card */
+  .service-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Container for the image */
+  .image-container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+  }
+  
+  /* Image styling */
+  .image-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design for larger screens */
+  @media (min-width: 768px) {
+    /* Adjust the image container layout */
+    .image-container {
+        width: 50%;
+        margin-top: 0;
+    }
+  }
+  
+/* Container styling */
+.it-services-container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 40px;
+  }
+  
+  /* Content layout */
+  .it-services-content {
+    display: flex;
+    max-width: 1200px;
+    gap: 45px;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  /* Image container */
+  .it-services-image img {
+    width: 100%;
+    max-width: 450px; /* Adjust the size as needed */
+    border-radius: 10px;
+   
+  }
+  /* Image container */
+.it-services-image {
+    flex: 1; /* Allows the image container to grow equally with text */
+  }
+/* Text container */
+.it-services-text {
+    flex: 1; /* Allows the text container to grow equally with the image */
+    max-width: 550px; /* Increased text section width */
+  }
+  
+  .it-services-text h2 {
+    font-size: 28px; /* Slightly larger heading */
+    color: #0a214c;
+    font-weight: bold;
+  }
+  
+  .it-services-text p {
+    font-size: 18px; /* Slightly larger text */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .it-services-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .it-services-image,
+    .it-services-text {
+      max-width: 100%;
+    }
+  }

@@ -1,0 +1,196 @@
+/* ==========================
+   MAIN CONTAINER STYLES WITH FADE-IN EFFECT
+   ========================== */
+   .services-container {
+    padding: 40px 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the content */
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center align horizontally */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* ==========================
+   FADE-IN ANIMATION
+   ========================== */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   HEADER STYLES WITH SMOOTH TRANSITION
+   ========================== */
+.services-header {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards 0.3s;
+}
+
+.services-subtitle {
+    font-size: 16px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CTA Button with Hover Effect */
+.services-header button {
+    background-color: #2154cc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(33, 84, 204, 0.3);
+}
+
+.services-header button:hover {
+    background-color: #173c99;
+    box-shadow: 0px 6px 20px rgba(33, 84, 204, 0.5);
+    transform: scale(1.05);
+}
+
+/* ==========================
+   IMAGE STYLING WITH FADE-IN EFFECT
+   ========================== */
+.services-image {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-out forwards 0.5s;
+}
+
+.services-image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px; /* Optional rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.services-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   LOCATIONS SECTION STYLING WITH ANIMATIONS
+   ========================== */
+.locations-container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-out forwards 0.7s;
+}
+
+/* Individual Location Box with Hover Effect */
+.location-box {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0; /* Add vertical spacing between sections */
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for location box */
+.location-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.location-box h2 {
+    color: #2e3a59;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.location-box h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2154cc;
+    margin-bottom: 5px;
+}
+
+.location-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+@media (max-width: 1024px) {
+    .services-container {
+        width: 95%;
+    }
+
+    .services-image img {
+        max-width: 90%;
+    }
+
+    .location-box h2 {
+        font-size: 20px;
+    }
+
+    .location-box p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 30px 15px;
+    }
+
+    .services-header {
+        font-size: 20px;
+    }
+
+    .services-image img {
+        max-width: 100%;
+    }
+
+    .locations-container {
+        width: 100%;
+    }
+
+    .location-box {
+        padding: 15px;
+    }
+
+    .location-box h2 {
+        font-size: 18px;
+    }
+
+    .location-box p {
+        font-size: 14px;
+    }
+}

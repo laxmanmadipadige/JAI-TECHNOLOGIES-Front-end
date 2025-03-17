@@ -1,0 +1,286 @@
+/* ==========================
+   RESPONSIVE GRID LAYOUT WITH FADE-IN EFFECT
+   ========================== */
+   .cognitip-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* ==========================
+   FADE-IN ANIMATION
+   ========================== */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   SIDEBAR WITH TOGGLE EFFECT & HOVER
+   ========================== */
+.cognitip-sidebar {
+    background: #f5f5f5;
+    padding: 20px;
+    transition: width 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.cognitip-sidebar.closed {
+    width: 60px;
+    overflow: hidden;
+    background: #e0e0e0;
+}
+
+/* Toggle Button with Hover Effect */
+.cognitip-toggle-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cognitip-toggle-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Sidebar Menu Items with Smooth Hover Effect */
+.cognitip-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cognitip-sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.cognitip-sidebar li:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.active-menu {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* ==========================
+   IMAGE STYLING WITH ZOOM EFFECT
+   ========================== */
+.cognitip-image-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.cognitip-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.cognitip-image:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   TIP CARD ANIMATION & FOCUS EFFECT
+   ========================== */
+.cognitip-tip-card {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.cognitip-tip-card.focused {
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* ==========================
+   BUTTON STYLING WITH HOVER & CLICK EFFECTS
+   ========================== */
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 10px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* AI Tip Button with Hover & Click Effects */
+.cognitip-ai-tip-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    border: 2px solid #0056b3;
+}
+
+.cognitip-ai-tip-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003b80);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+.cognitip-ai-tip-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Custom AI Tip Button */
+.custom-tip-btn {
+    background: linear-gradient(135deg, #ff9800, #e68900);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+    border: 2px solid #e68900;
+}
+
+.custom-tip-btn:hover {
+    background: linear-gradient(135deg, #e68900, #c77800);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 152, 0, 0.5);
+}
+
+.custom-tip-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(255, 152, 0, 0.2);
+}
+
+/* ==========================
+   AD SIDEBAR WITH HOVER EFFECT
+   ========================== */
+.cognitip-ad-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-left: 2px solid #ddd;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ad Block Styling with Hover Effect */
+.cognitip-ad-block {
+    width: 100%;
+    padding: 20px;
+    background: #ff9800;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ad Block Hover Effect */
+.cognitip-ad-block:hover {
+    transform: scale(1.05);
+    background: #e68900;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+@media (max-width: 1024px) {
+    .cognitip-container {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .cognitip-ad-sidebar {
+        display: none;
+    }
+}
+
+/* Adjust layout for mobile devices */
+@media (max-width: 768px) {
+    .cognitip-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .cognitip-image-container {
+        height: auto;
+        text-align: center;
+    }
+
+    .cognitip-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .cognitip-tip-card {
+        width: 90%;
+        max-width: 400px;
+        font-size: 14px;
+        padding: 15px;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: none;
+        margin: 20px auto;
+    }
+}
+
+/* Adjust for smaller mobile screens */
+@media (max-width: 480px) {
+    .cognitip-container {
+        padding: 5px;
+    }
+
+    .cognitip-tip-card {
+        width: 95%;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .cognitip-ai-tip-btn,
+    .custom-tip-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

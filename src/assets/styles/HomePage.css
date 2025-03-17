@@ -1,0 +1,181 @@
+/* ================================
+   HERO SECTION - BIGGER SIZE WITH ANIMATIONS
+   ================================ */
+   .hero-section {
+    display: flex; /* Align text and image side by side */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Push text and image to opposite sides */
+    width: 80%; /* Make it take 80% of the page width */
+    max-width: 1600px; /* Prevent it from getting too wide */
+    height: 80vh; /* Make it take 80% of the viewport height */
+    margin: 0 auto; /* Center the section */
+    padding: 50px 0; /* Add spacing on top and bottom */
+    opacity: 0; /* Initially hidden for fade-in */
+    transform: translateY(30px); /* Initial position for animation */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* ================================
+   FADE-IN ANIMATION
+   ================================ */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   TEXT CONTENT STYLING
+   ================================ */
+.hero-content {
+    max-width: 50%; /* Let text take half of the section */
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* Bigger Headline */
+.hero-content h2 {
+    font-size: 3.0rem; /* Increased size */
+    font-weight: 800;
+    color: #0a0a0a;
+    margin-bottom: 25px;
+}
+
+/* Bigger Paragraph */
+.hero-content p {
+    font-size: 1.4rem; /* Increased size */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 40px;
+}
+
+/* ================================
+   BUTTON STYLING WITH HOVER EFFECTS
+   ================================ */
+.hero-buttons {
+    display: flex; /* Align buttons horizontally */
+    gap: 20px; /* More spacing between buttons */
+}
+
+/* Bigger Buttons */
+.hero-btn {
+    padding: 16px 32px; /* Bigger buttons */
+    font-size: 20px; /* Bigger text */
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add hover effect with subtle scale */
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Primary Button (Products) */
+.primary-btn {
+    background-color: #0000ff;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.3);
+}
+
+.primary-btn:hover {
+    background-color: #0000cc;
+    box-shadow: 0px 6px 20px rgba(0, 0, 255, 0.5);
+}
+
+/* Secondary Button (Services) */
+.secondary-btn {
+    background-color: #e0e7ff;
+    color: #0000ff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.15);
+}
+
+.secondary-btn:hover {
+    background-color: #d0dbff;
+    box-shadow: 0px 6px 20px rgba(0, 0, 255, 0.3);
+}
+
+/* ================================
+   IMAGE STYLING (BIGGER WITH DIAGONAL CUT & FADE-IN)
+   ================================ */
+.hero-image {
+    position: relative; /* Allows precise control */
+    width: 50%; /* Image takes half the section */
+    height: 80vh; /* Same height as the section */
+    overflow: hidden; /* Hide extra content */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(50px);
+    animation: fadeInRight 1s ease-out forwards 0.5s; /* Delayed fade-in */
+}
+
+/* Bigger Image with Diagonal Cut */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio */
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%); /* Creates diagonal cut */
+    transition: clip-path 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.hero-image img:hover {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* ================================
+   IMAGE FADE-IN FROM RIGHT
+   ================================ */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================================
+   RESPONSIVE DESIGN (FOR SMALLER SCREENS)
+   ================================ */
+@media (max-width: 1100px) {
+    .hero-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center-align text */
+        height: auto; /* Allow natural height */
+        width: 90%; /* Take more width on smaller screens */
+        padding: 60px 20px; /* Adjust spacing */
+    }
+
+    .hero-content {
+        max-width: 100%; /* Let text take full width */
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .hero-buttons {
+        justify-content: center; /* Center buttons */
+    }
+
+    .hero-image {
+        width: 100%; /* Full width image */
+        height: 60vh; /* Reduce height */
+        margin-top: 30px; /* Add space above image */
+        transform: translateY(20px);
+        animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    /* Modify diagonal cut for smaller screens */
+    .hero-image img {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    }
+}
