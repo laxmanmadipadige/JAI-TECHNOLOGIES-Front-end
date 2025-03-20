@@ -11,6 +11,8 @@ import ComprehensiveIT from './Components/ComprehensiveIT'; //
 import Footer from './Components/Footer';  //
 
 
+import QuoTipTest from './Components/QuoTipTest';
+
 import CogniTip from './product/CogniTip';
 import CogniQuotes from './product/CogniQuotes';
 import AboutUs from './pages/Aboutus'; // Ensure the path to AboutUs component is correct
@@ -57,6 +59,7 @@ function App() {
                             element={
                                 <>
                                     <HomePage />
+                                    <QuoTipTest />
                                     <QuoteAndTipGenerator />
                                     <FeaturesSection />
                                     <ProductsSection />

@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BACKEND_URL = "http://localhost:5002"; // ✅ Ensure this is correct
+const BACKEND_URL = "https://jai-tech-backend-ekehczgpa8bxb8et.centralus-01.azurewebsites.net";
+// ✅ Ensure this is correct
 
 export const sendEmail = async (formData) => {
     try {
