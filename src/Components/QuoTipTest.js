@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { fetchAIQuote, fetchAICustomQuote, fetchAITip, fetchAICustomTip } from "../apiCall/api"; 
+import { fetchAIQuote, fetchAICustomQuote, fetchAITip, fetchAICustomTip } from "../apiCall/apitest"; 
 import "../assets/styles/QuoteAndTipGenerator.css"; 
 
 const QuoteAndTipGenerator = () => {
