@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const BACKEND_URL = "https://jai-tech-backend-ekehczgpa8bxb8et.centralus-01.azurewebsites.net";
-// ✅ Ensure this is correct
 
+// ✅ Email API
 export const sendEmail = async (formData) => {
     try {
         const response = await axios.post(`${BACKEND_URL}/api/send-email`, formData);
@@ -12,22 +12,20 @@ export const sendEmail = async (formData) => {
     }
 };
 
-
-
-// ✅ AI Tip API Call
-export const fetchAITip = async (prompt) => {
+// ✅ Tip API
+export const fetchAITip = async (keywords) => {
     try {
-        const response = await axios.post(`${BACKEND_URL}/api/generate-tip`, { prompt });
-        return response.data.tip; // ✅ Only return the tip string, NOT the entire Axios response
+        const response = await axios.post(`${BACKEND_URL}/api/quotes/generate-tip`, { keywords });
+        return response.data.tip;
     } catch (error) {
         throw new Error(error.response?.data?.error || "Error fetching AI tip");
     }
 };
 
-// Fetch AI Quote from Backend
+// ✅ Quote API
 export const fetchAIQuote = async (keywords) => {
     try {
-        const response = await axios.post(`${BACKEND_URL}/api/generate-quote`, { keywords });
+        const response = await axios.post(`${BACKEND_URL}/api/quotes/generate-quote`, { keywords });
         return response.data.quote;
     } catch (error) {
         throw new Error(error.response?.data?.error || "Error fetching AI Quote");
