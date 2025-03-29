@@ -1,0 +1,321 @@
+/* ==========================
+   MAIN LAYOUT
+   ========================== */
+   .jcq-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  @keyframes fadeInSlide {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* ==========================
+     SIDEBAR STYLING
+     ========================== */
+  .jcq-sidebar {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    animation: slideInLeft 0.6s ease-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .jcq-toggle-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .jcq-toggle-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .jcq-sidebar h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px 20px;
+  }
+  
+  .jcq-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .jcq-sidebar li {
+    display: flex;
+    color: white !important;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .jcq-sidebar li:hover,
+  .jcq-active-menu {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .jcq-sidebar.closed {
+    width: 60px;
+  }
+  
+  .jcq-sidebar.closed h2 {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .jcq-sidebar.closed li span {
+    display: none;
+  }
+  
+  /* ==========================
+     INTRO CONTENT STYLING
+     ========================== */
+  .jcq-intro {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .jcq-intro h1 {
+    font-size: 2rem;
+    color: #1378e4;
+    margin-bottom: 20px;
+  }
+  
+  .jcq-intro ul li {
+    margin: 10px 0;
+  }
+  
+  /* ==========================
+     TIP CARD STYLING
+     ========================== */
+  .jcq-tip-card {
+    margin: 30px auto;
+    max-width: 700px;
+    width: 90%;
+    padding: 30px;
+    background: black;
+    color: white;
+    border-radius: 16px;
+    border: 2px solid #334155;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: slideUpCard 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @keyframes slideUpCard {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .jcq-tip-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .jcq-tip-card p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  /* ==========================
+     BUTTON STYLING
+     ========================== */
+  .jcq-custom-btn,
+  .jcq-generate-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .jcq-custom-btn:hover,
+  .jcq-generate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* ==========================
+     INPUT FIELD
+     ========================== */
+  .jcq-custom-input {
+    padding: 18px 24px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 500px;
+    background: #3a3a3a;
+    color: white;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+  }
+  
+  .jcq-input-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  /* ==========================
+     RESPONSE BOX
+     ========================== */
+  .jcq-response-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #3a3a3a;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* ==========================
+     MEDIA QUERIES
+     ========================== */
+  @media (max-width: 768px) {
+    .jcq-container {
+      display: block;
+      padding: 0;
+    }
+  
+    .jcq-sidebar {
+      width: auto;
+      padding: 8px;
+      border-radius: 12px;
+    }
+  
+    .jcq-sidebar ul {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      max-width: 90vw;
+    }
+  
+    .jcq-sidebar li {
+      padding: 6px 10px;
+      font-size: 12px;
+      gap: 6px;
+    }
+  
+    .jcq-sidebar h2 {
+      display: none;
+    }
+  
+    .jcq-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 16px;
+      font-size: 24px;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+  
+    .jcq-sidebar ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  
+    .jcq-sidebar li {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      font-size: 14px;
+      background: #2c2c2c;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  
+    .jcq-active-menu {
+      background: #007bff;
+      color: white;
+    }
+  
+    .jcq-content {
+      padding: 20px;
+    }
+  }
+  
+  .jcq-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  

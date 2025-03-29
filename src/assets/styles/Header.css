@@ -1,0 +1,254 @@
+/* Navbar Container - Adjusting Height */
+.navbar {
+    position: relative; /* Ensures navbar scrolls with page */
+    display: flex;
+    justify-content: space-between; /* Align items across the navbar */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px; /* Adjust padding */
+    border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+    background-color: white; /* Ensure white background */
+    width: 100%;
+    height: 15vh; /* Reduce height */
+    max-height: 100px; /* Ensure max height does not expand too much */
+    box-sizing: border-box; /* Prevent extra spacing */
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center; /* Align logo properly */
+}
+
+/* Medium Logo Image */
+.logo img {
+    width: 175px; /* Set a moderate size for the logo */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+}
+
+/* Navigation Links Container */
+.nav-links-container {
+    margin-left: auto; /* Push navigation links to the right */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ensure Navigation Links are Styled Properly */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+    color: #2154cc;
+}
+
+/* Ensure the dropdown menu appears directly below the parent link */
+.dropdown {
+    position: relative; /* Keeps submenus aligned under the parent */
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position it directly below the parent menu */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    min-width: 200px; /* Ensure consistent width */
+    padding: 10px 0;
+}
+
+/* Display the dropdown when hovering */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style dropdown menu items */
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Contact Button */
+.contact-btn {
+    padding: 8px 16px;
+    background-color: #0056f7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents the button from expanding */
+}
+
+.contact-btn:hover {
+    background-color: #003bb3;
+}
+
+/* Hide hamburger icon by default */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between button and icon */
+    color: black; /* Ensure visibility */
+    z-index: 1000; /* Bring it above other elements */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        height: auto; /* Let it adjust dynamically */
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 100px; /* Reduce size further for smaller screens */
+    }
+}
+
+/* Adjust button size for mobile */
+@media (max-width: 768px) {
+    .contact-btn {
+        font-size: 12px;  /* Reduce font size */
+        padding: 6px 12px; /* Reduce padding */
+        max-width: 150px;  /* Prevent button from becoming too wide */
+    }
+}
+
+/* Mobile Navbar Styling */
+/* Mobile Navbar Styling */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 175px; /* Adjust for mobile */
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block !important; /* Ensure visibility */
+        width: auto;
+        height: auto;
+        color: black;
+        z-index: 1000;
+        position: relative;
+        opacity: 1;
+    }
+
+    .menu-toggle:focus {
+        outline: none;
+    }
+
+    /* Mobile Menu */
+    .nav-links-container {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 10px;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        width: 220px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .nav-links-container.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    /* Dropdown Styling */
+    .dropdown {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Show sublist on hover */
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        width: 180px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .dropdown-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-menu ul li {
+        padding: 8px 10px;
+        text-align: left;
+    }
+
+    .dropdown-menu ul li:hover {
+        background: #f5f5f5;
+    }
+}

@@ -1,0 +1,252 @@
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.head {
+  text-align: center;
+  font-size: large;
+  margin: 20px;
+  background-color:white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.head:hover {
+  transform: scale(1.02);
+}
+
+.aboutUs {
+  text-align: center;
+  color: white !important;
+  background-color: #0a0b0d;
+  height: 150px;
+  margin: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.head h1 {
+  font-size: 2.5rem;
+  color: #0d1a57;
+}
+
+.head h3 {
+  color: #6c757d;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.3);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Timeline Styling */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 900px;
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.timeline-item {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+}
+
+.timeline-image {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.timeline-text h3 {
+  font-size: 1.5rem;
+  color: #0d1a57;
+  margin-bottom: 10px;
+}
+
+.timeline-text p {
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+.timeline-marker {
+  position: absolute;
+  background-color: #0d6efd;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 40px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.feature {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.2);
+}
+
+/* Better Together Section */
+.better-together {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  animation: fadeInUp 1.8s ease-in-out forwards;
+}
+
+.better-together .content {
+  max-width: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.better-together:hover .content {
+  transform: scale(1.03);
+}
+
+.better-together h2 {
+  font-size: 2rem;
+  color: #0d1a57;
+  margin-bottom: 20px;
+}
+
+.better-together h4 {
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.better-together .image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.better-together .image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .better-together {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .better-together .content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-content {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    margin: 20px;
+  }
+
+  .better-together {
+    padding: 10px;
+  }
+
+  .better-together h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,71 @@
+/* Products.css */
+.products-container {
+  background-color: rgb(180, 198, 227);
+  padding: 40px;
+  text-align: center;
+}
+
+.products-header {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures wrapping */
+}
+
+.product-card {
+  flex: 1 1 30%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.product-card .learn-more {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-card .learn-more:hover {
+  text-decoration: underline;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .products-grid {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center cards */
+  }
+
+  .product-card {
+    flex: 1 1 100%; /* Full width */
+    max-width: 90%; /* Slight margin on smaller screens */
+  }
+}
